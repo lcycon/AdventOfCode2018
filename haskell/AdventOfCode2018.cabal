@@ -27,3 +27,12 @@ executable d1
                      , AdventOfCode2018
                      , text
                      , containers
+
+executable d2
+  hs-source-dirs:      exec
+  main-is:             Day2.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , AdventOfCode2018
+                     , text
+                     , unordered-containers
