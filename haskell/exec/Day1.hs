@@ -3,7 +3,6 @@ module Main where
 import           Data.List      (foldl', scanl')
 import qualified Data.Set       as Set
 import           Data.Text      (Text)
-import qualified Data.Text      as Text
 import           Data.Text.Read (decimal, signed)
 import           Text.Printf    (printf)
 
@@ -30,7 +29,8 @@ readInputLine i = result
 firstDupe :: [Int] -> Int
 firstDupe xs = dupe xs Set.empty
   where
-    dupe (x:xs) s =
+    dupe (x:xs') s =
       if Set.member x s
         then x
-        else dupe xs (Set.insert x s)
+        else dupe xs' (Set.insert x s)
+    dupe _ _ = error "Should never happen"

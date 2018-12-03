@@ -1,11 +1,10 @@
 module Main where
 
 import qualified Data.HashMap.Strict as HM
-import           Data.List           (foldl', tails)
+import           Data.List           (tails)
 import           Data.Maybe          (catMaybes, isJust)
 import           Data.Text           (Text)
 import qualified Data.Text           as Text
-import           Data.Text.Read      (decimal, signed)
 import           Text.Printf         (printf)
 
 import           AOC.Reader          (readInput)
